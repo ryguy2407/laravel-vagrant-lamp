@@ -33,7 +33,7 @@ sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.0/apache2/php.ini
 sudo a2enmod rewrite
 
 echo "-- Creating virtual hosts --"
-sudo ln -fs /vagrant/public/ /var/www/app
+sudo ln -fs /vagrant/laravel/public /var/www/app
 cat << EOF | sudo tee -a /etc/apache2/sites-available/default.conf
 <Directory "/var/www/">
     AllowOverride All
